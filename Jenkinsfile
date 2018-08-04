@@ -11,5 +11,10 @@ pipeline {
         sh 'ruby hello.rb'
       }
     }
+    stage('test') {
+      steps {
+        sh 'ruby tests/hello-test.rb'
+      }
+    }
   }
 }
